@@ -19,7 +19,7 @@
             "ApiId"
           ]
         },
-        "Definition": "type User {\r\n  id: String!\r\n  name: String\r\n}\r\n\r\ntype Query {\r\n  getUsers: [User]\r\n}\r\n"
+        "Definition": "type User {\n  id: ID!\n  name: String\n}\n\ntype Query {\n  getUsers: [User]\n  test: String\n}\n"
       },
       "Metadata": {
         "aws:cdk:path": "cdk-stack/Api/Schema"
@@ -141,6 +141,107 @@
       ],
       "Metadata": {
         "aws:cdk:path": "cdk-stack/Api/lambdaDatasource/QuerygetUsersResolver/Resource"
+      }
+    },
+    "ApilambdaDatasource2ServiceRoleFC8C0A04": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "appsync.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/Api/lambdaDatasource2/ServiceRole/Resource"
+      }
+    },
+    "ApilambdaDatasource2ServiceRoleDefaultPolicy2CD0D7FA": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "myfunctest29F190C4",
+                  "Arn"
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "PolicyName": "ApilambdaDatasource2ServiceRoleDefaultPolicy2CD0D7FA",
+        "Roles": [
+          {
+            "Ref": "ApilambdaDatasource2ServiceRoleFC8C0A04"
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/Api/lambdaDatasource2/ServiceRole/DefaultPolicy/Resource"
+      }
+    },
+    "ApilambdaDatasource22BC516E5": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "Name": "lambdaDatasource2",
+        "Type": "AWS_LAMBDA",
+        "LambdaConfig": {
+          "LambdaFunctionArn": {
+            "Fn::GetAtt": [
+              "myfunctest29F190C4",
+              "Arn"
+            ]
+          }
+        },
+        "ServiceRoleArn": {
+          "Fn::GetAtt": [
+            "ApilambdaDatasource2ServiceRoleFC8C0A04",
+            "Arn"
+          ]
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/Api/lambdaDatasource2/Resource"
+      }
+    },
+    "ApilambdaDatasource2QuerytestResolverF411BD7F": {
+      "Type": "AWS::AppSync::Resolver",
+      "Properties": {
+        "ApiId": {
+          "Fn::GetAtt": [
+            "ApiF70053CD",
+            "ApiId"
+          ]
+        },
+        "FieldName": "test",
+        "TypeName": "Query",
+        "DataSourceName": "lambdaDatasource2",
+        "Kind": "UNIT"
+      },
+      "DependsOn": [
+        "ApilambdaDatasource22BC516E5",
+        "ApiSchema510EECD7"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/Api/lambdaDatasource2/QuerytestResolver/Resource"
       }
     },
     "ExampleVPC8F37DF5D": {
@@ -967,7 +1068,7 @@
       "Properties": {
         "Code": {
           "S3Bucket": {
-            "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3Bucket19A3D08C"
+            "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3Bucket0D8D88C8"
           },
           "S3Key": {
             "Fn::Join": [
@@ -980,7 +1081,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43"
+                          "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
                         }
                       ]
                     }
@@ -993,7 +1094,7 @@
                       "Fn::Split": [
                         "||",
                         {
-                          "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43"
+                          "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
                         }
                       ]
                     }
@@ -1014,13 +1115,14 @@
             "SECRET_ID": {
               "Ref": "AuroraSeekClusterSecretAttachment56947955"
             },
+            "DATABASE_URL": "",
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
           }
         },
         "Handler": "index.main",
         "MemorySize": 1024,
         "Runtime": "nodejs14.x",
-        "Timeout": 5
+        "Timeout": 20
       },
       "DependsOn": [
         "myfunctionServiceRoleDefaultPolicy4ECD21C4",
@@ -1028,7 +1130,108 @@
       ],
       "Metadata": {
         "aws:cdk:path": "cdk-stack/my-function/Resource",
-        "aws:asset:path": "asset.b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
+        "aws:asset:path": "asset.4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905",
+        "aws:asset:is-bundled": true,
+        "aws:asset:property": "Code"
+      }
+    },
+    "myfunctestServiceRoleE9666132": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com"
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition"
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+              ]
+            ]
+          }
+        ]
+      },
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/my-func-test/ServiceRole/Resource"
+      }
+    },
+    "myfunctest29F190C4": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3BucketAAEF5CCC"
+          },
+          "S3Key": {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Fn::Select": [
+                    0,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "Fn::Select": [
+                    1,
+                    {
+                      "Fn::Split": [
+                        "||",
+                        {
+                          "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            ]
+          }
+        },
+        "Role": {
+          "Fn::GetAtt": [
+            "myfunctestServiceRoleE9666132",
+            "Arn"
+          ]
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+          }
+        },
+        "Handler": "index.test",
+        "MemorySize": 1024,
+        "Runtime": "nodejs14.x",
+        "Timeout": 20
+      },
+      "DependsOn": [
+        "myfunctestServiceRoleE9666132"
+      ],
+      "Metadata": {
+        "aws:cdk:path": "cdk-stack/my-func-test/Resource",
+        "aws:asset:path": "asset.9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420",
         "aws:asset:is-bundled": true,
         "aws:asset:property": "Code"
       }
@@ -1036,7 +1239,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/11S207DMAz9lr1ngTKExBu7wDSBUFkn3t3MbNnapMTJUFX138llN3iyfXxsn9jJeHb/yG8HT/BDQ7He33RCG+RdYUHs2RJJOyOQjYnQemwj1YZNtSJrnLBs+qVyMFCjRROCE79noV0HTUOtErybG2i239W4kYEVo4+3v1EhtlhDADz+ii17g7pcwwwsFEmDT11FYVR1uIwNfs8k1Lxb6iqyo811JUUblUavZyjuePfZiIB95lOWu9InClcqjC+6eEvtLK6gTO0SfsH8TrSQYKVWZ3Jwnhd5MO9g52DxB1qWG3nw7qXxQvmFef9ESEqO0dj63W9rVJYVKJyRtp0b7Zqo4RromVmTPxUa//YKiaaVo3CJNOhcNJtcA2GHJRD6ViapmU2OhT2jCFINCjZoeJdGBl4yKzAbtFcKz4T/mZ5V8YBDpde4I/4ezYtTIi6MRkMIf4p4/Fo+5hMn9mgnXtqxlPvmp4K+Z6ER39HNIXvg2Yhngx1JOTROWVkjXyb7CyJm07zQAgAA"
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/11S207DMAz9Ft6zjDGExBu7wDQxTWVFvLuZ2bK1SYmTTVXVfyeX3eDJ9vGxfWJnwAePz/z+7gWO1BPrfb8V2iBvcwtiz1ZI2hmBbESE1mMbqTZsohVZ44Rlk2+VgYEKLZoQnPkdC+1aqGtqlODtzEC9/SlHtQysGH0s/ka52GIFAfD4OzZsAVWxhilYyJMGn7qJwqjycB0b/I5JqHi70mVkR5vpUoomKo1ex1A88ParFgH7yiYsc4VP5K5QGF909VbaWfyEIrVL+BXzO9FCgpVaXcjBeZ1nwSzBzsDiERqWGXnw7rXxXPmFef9MSEpO0cj63W8rVJblKJyRtpkZ7eqo4RbomFmTPxUa//YSiSalo3CJNOhSNB3fAmGHBRD6ViapmY5PhR2jCFIFCjZoeJtGBl4yn2A2aG8UXgj/Mx0r4wF7Sq9xR3wZzZtTIi6Mhj0If4p4/Fo+5mMn9mjHXtqplPvm54KuY6ER31H/MHjig6H/szuSsmecsrJCvkr2F+IC+6vQAgAA"
       },
       "Metadata": {
         "aws:cdk:path": "cdk-stack/CDKMetadata/Default"
@@ -1044,17 +1247,29 @@
     }
   },
   "Parameters": {
-    "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3Bucket19A3D08C": {
+    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3Bucket0D8D88C8": {
       "Type": "String",
-      "Description": "S3 bucket for asset \"b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16\""
+      "Description": "S3 bucket for asset \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
     },
-    "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43": {
+    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02": {
       "Type": "String",
-      "Description": "S3 key for asset version \"b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16\""
+      "Description": "S3 key for asset version \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
     },
-    "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16ArtifactHashB332BF34": {
+    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905ArtifactHashE89DF71B": {
       "Type": "String",
-      "Description": "Artifact hash for asset \"b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16\""
+      "Description": "Artifact hash for asset \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
+    },
+    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3BucketAAEF5CCC": {
+      "Type": "String",
+      "Description": "S3 bucket for asset \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
+    },
+    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336": {
+      "Type": "String",
+      "Description": "S3 key for asset version \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
+    },
+    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420ArtifactHash80E0AB76": {
+      "Type": "String",
+      "Description": "Artifact hash for asset \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
     }
   }
 }

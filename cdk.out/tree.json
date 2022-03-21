@@ -47,7 +47,7 @@
                         "ApiId"
                       ]
                     },
-                    "definition": "type User {\r\n  id: String!\r\n  name: String\r\n}\r\n\r\ntype Query {\r\n  getUsers: [User]\r\n}\r\n"
+                    "definition": "type User {\n  id: ID!\n  name: String\n}\n\ntype Query {\n  getUsers: [User]\n  test: String\n}\n"
                   }
                 },
                 "constructInfo": {
@@ -211,6 +211,163 @@
                             "fieldName": "getUsers",
                             "typeName": "Query",
                             "dataSourceName": "lambdaDatasource",
+                            "kind": "UNIT"
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-appsync.CfnResolver",
+                          "version": "1.149.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.Resolver",
+                      "version": "1.149.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-appsync.LambdaDataSource",
+                  "version": "1.149.0"
+                }
+              },
+              "lambdaDatasource2": {
+                "id": "lambdaDatasource2",
+                "path": "cdk-stack/Api/lambdaDatasource2",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "cdk-stack/Api/lambdaDatasource2/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "cdk-stack/Api/lambdaDatasource2/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "appsync.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.CfnRole",
+                          "version": "1.149.0"
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "cdk-stack/Api/lambdaDatasource2/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "cdk-stack/Api/lambdaDatasource2/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "lambda:InvokeFunction",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "myfunctest29F190C4",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "ApilambdaDatasource2ServiceRoleDefaultPolicy2CD0D7FA",
+                                "roles": [
+                                  {
+                                    "Ref": "ApilambdaDatasource2ServiceRoleFC8C0A04"
+                                  }
+                                ]
+                              }
+                            },
+                            "constructInfo": {
+                              "fqn": "@aws-cdk/aws-iam.CfnPolicy",
+                              "version": "1.149.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/aws-iam.Policy",
+                          "version": "1.149.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.Role",
+                      "version": "1.149.0"
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-stack/Api/lambdaDatasource2/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::AppSync::DataSource",
+                      "aws:cdk:cloudformation:props": {
+                        "apiId": {
+                          "Fn::GetAtt": [
+                            "ApiF70053CD",
+                            "ApiId"
+                          ]
+                        },
+                        "name": "lambdaDatasource2",
+                        "type": "AWS_LAMBDA",
+                        "lambdaConfig": {
+                          "lambdaFunctionArn": {
+                            "Fn::GetAtt": [
+                              "myfunctest29F190C4",
+                              "Arn"
+                            ]
+                          }
+                        },
+                        "serviceRoleArn": {
+                          "Fn::GetAtt": [
+                            "ApilambdaDatasource2ServiceRoleFC8C0A04",
+                            "Arn"
+                          ]
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-appsync.CfnDataSource",
+                      "version": "1.149.0"
+                    }
+                  },
+                  "QuerytestResolver": {
+                    "id": "QuerytestResolver",
+                    "path": "cdk-stack/Api/lambdaDatasource2/QuerytestResolver",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "cdk-stack/Api/lambdaDatasource2/QuerytestResolver/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::AppSync::Resolver",
+                          "aws:cdk:cloudformation:props": {
+                            "apiId": {
+                              "Fn::GetAtt": [
+                                "ApiF70053CD",
+                                "ApiId"
+                              ]
+                            },
+                            "fieldName": "test",
+                            "typeName": "Query",
+                            "dataSourceName": "lambdaDatasource2",
                             "kind": "UNIT"
                           }
                         },
@@ -1477,7 +1634,7 @@
                   "aws:cdk:cloudformation:props": {
                     "code": {
                       "s3Bucket": {
-                        "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3Bucket19A3D08C"
+                        "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3Bucket0D8D88C8"
                       },
                       "s3Key": {
                         "Fn::Join": [
@@ -1490,7 +1647,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43"
+                                      "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
                                     }
                                   ]
                                 }
@@ -1503,7 +1660,7 @@
                                   "Fn::Split": [
                                     "||",
                                     {
-                                      "Ref": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43"
+                                      "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
                                     }
                                   ]
                                 }
@@ -1524,13 +1681,14 @@
                         "SECRET_ID": {
                           "Ref": "AuroraSeekClusterSecretAttachment56947955"
                         },
+                        "DATABASE_URL": "",
                         "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
                       }
                     },
                     "handler": "index.main",
                     "memorySize": 1024,
                     "runtime": "nodejs14.x",
-                    "timeout": 5
+                    "timeout": 20
                   }
                 },
                 "constructInfo": {
@@ -1548,13 +1706,13 @@
             "id": "AssetParameters",
             "path": "cdk-stack/AssetParameters",
             "children": {
-              "b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16": {
-                "id": "b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
-                "path": "cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
+              "4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905": {
+                "id": "4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905",
+                "path": "cdk-stack/AssetParameters/4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905",
                 "children": {
                   "S3Bucket": {
                     "id": "S3Bucket",
-                    "path": "cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/S3Bucket",
+                    "path": "cdk-stack/AssetParameters/4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905/S3Bucket",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.149.0"
@@ -1562,7 +1720,7 @@
                   },
                   "S3VersionKey": {
                     "id": "S3VersionKey",
-                    "path": "cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/S3VersionKey",
+                    "path": "cdk-stack/AssetParameters/4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905/S3VersionKey",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.149.0"
@@ -1570,7 +1728,41 @@
                   },
                   "ArtifactHash": {
                     "id": "ArtifactHash",
-                    "path": "cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/ArtifactHash",
+                    "path": "cdk-stack/AssetParameters/4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905/ArtifactHash",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.149.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/core.Construct",
+                  "version": "1.149.0"
+                }
+              },
+              "9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420": {
+                "id": "9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420",
+                "path": "cdk-stack/AssetParameters/9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "cdk-stack/AssetParameters/9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420/S3Bucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.149.0"
+                    }
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "cdk-stack/AssetParameters/9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420/S3VersionKey",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.CfnParameter",
+                      "version": "1.149.0"
+                    }
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "cdk-stack/AssetParameters/9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420/ArtifactHash",
                     "constructInfo": {
                       "fqn": "@aws-cdk/core.CfnParameter",
                       "version": "1.149.0"
@@ -1585,6 +1777,157 @@
             },
             "constructInfo": {
               "fqn": "@aws-cdk/core.Construct",
+              "version": "1.149.0"
+            }
+          },
+          "my-func-test": {
+            "id": "my-func-test",
+            "path": "cdk-stack/my-func-test",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "cdk-stack/my-func-test/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "cdk-stack/my-func-test/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-iam.CfnRole",
+                      "version": "1.149.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-iam.Role",
+                  "version": "1.149.0"
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "cdk-stack/my-func-test/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "cdk-stack/my-func-test/Code/Stage",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/core.AssetStaging",
+                      "version": "1.149.0"
+                    }
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "cdk-stack/my-func-test/Code/AssetBucket",
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/aws-s3.BucketBase",
+                      "version": "1.149.0"
+                    }
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-s3-assets.Asset",
+                  "version": "1.149.0"
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "cdk-stack/my-func-test/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3BucketAAEF5CCC"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "role": {
+                      "Fn::GetAtt": [
+                        "myfunctestServiceRoleE9666132",
+                        "Arn"
+                      ]
+                    },
+                    "environment": {
+                      "variables": {
+                        "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
+                      }
+                    },
+                    "handler": "index.test",
+                    "memorySize": 1024,
+                    "runtime": "nodejs14.x",
+                    "timeout": 20
+                  }
+                },
+                "constructInfo": {
+                  "fqn": "@aws-cdk/aws-lambda.CfnFunction",
+                  "version": "1.149.0"
+                }
+              }
+            },
+            "constructInfo": {
+              "fqn": "@aws-cdk/aws-lambda-nodejs.NodejsFunction",
               "version": "1.149.0"
             }
           },

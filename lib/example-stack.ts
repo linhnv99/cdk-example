@@ -30,7 +30,7 @@ export class ExampleStack extends cdk.Stack {
 
     const myFnc = new NodejsFunction(this, "my-function", {
       memorySize: 1024,
-      timeout: cdk.Duration.seconds(5),
+      timeout: cdk.Duration.seconds(20),
       handler: "main",
       entry: "src/lambda/index.ts",
       bundling: {
@@ -55,17 +55,34 @@ export class ExampleStack extends cdk.Stack {
         },
       },
       environment: {
-        SECRET_ID: cluster.secret?.secretArn || ''
+        SECRET_ID: cluster.secret?.secretArn || '',
+        DATABASE_URL: process.env.DATABASE_URL || ''
       },
+    });
+
+    const myFnc2 = new NodejsFunction(this, "my-func-test", {
+      memorySize: 1024,
+      timeout: cdk.Duration.seconds(20),
+      handler: "test",
+      entry: "src/lambda/test.ts",
+      bundling: {
+        minify: false,
+        externalModules: ["aws-sdk"],
+      }
     });
 
     cluster.grantDataApiAccess(myFnc)
 
     const lambdaDatasource = api.addLambdaDataSource('lambdaDatasource', myFnc)
-
+    const lambdaDatasource2 = api.addLambdaDataSource('lambdaDatasource2', myFnc2)
+    
     lambdaDatasource.createResolver({
       typeName: 'Query',
       fieldName: 'getUsers'
+    })
+    lambdaDatasource2.createResolver({
+      typeName: 'Query',
+      fieldName: 'test'
     })
   }
 }
