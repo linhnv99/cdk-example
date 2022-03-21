@@ -1,0 +1,1620 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "cdk-stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://140399347549/ap-northeast-1",
+      "properties": {
+        "templateFile": "cdk-stack.template.json",
+        "validateOnSynth": false
+      },
+      "metadata": {
+        "/cdk-stack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
+              "id": "b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
+              "packaging": "zip",
+              "sourceHash": "b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16",
+              "s3BucketParameter": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3Bucket19A3D08C",
+              "s3KeyParameter": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43",
+              "artifactHashParameter": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16ArtifactHashB332BF34"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:453:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:186:23)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "ExampleStack.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiF70053CD",
+            "trace": [
+              "new GraphqlApi (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:457:16)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:12:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/Schema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiSchema510EECD7",
+            "trace": [
+              "Schema.bind (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\schema.ts:80:21)",
+              "new GraphqlApi (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:473:39)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:12:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/DefaultApiKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiDefaultApiKeyF991C37B",
+            "trace": [
+              "GraphqlApi.createAPIKey (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:629:12)",
+              "new GraphqlApi (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi.ts:479:34)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:12:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/lambdaDatasource/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApilambdaDatasourceServiceRole2CA75790",
+            "trace": [
+              "new Role (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:358:18)",
+              "new BaseDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:120:47)",
+              "new BackedDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:168:5)",
+              "new LambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:301:5)",
+              "GraphqlApi.addLambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:219:12)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:47:34)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/lambdaDatasource/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApilambdaDatasourceServiceRoleDefaultPolicy3A97E34D",
+            "trace": [
+              "new Policy (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:399:28)",
+              "Function.addToPrincipal (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "Function.addToPrincipalOrResource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:115:26)",
+              "NodejsFunction.grantInvoke (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:352:25)",
+              "new LambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:307:26)",
+              "GraphqlApi.addLambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:219:12)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:47:34)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/lambdaDatasource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApilambdaDatasource2C776EE2",
+            "trace": [
+              "new BaseDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:124:15)",
+              "new BackedDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:168:5)",
+              "new LambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:301:5)",
+              "GraphqlApi.addLambdaDataSource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\graphqlapi-base.ts:219:12)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:47:34)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/Api/lambdaDatasource/QuerygetUsersResolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApilambdaDatasourceQuerygetUsersResolver191F1CF6",
+            "trace": [
+              "new Resolver (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\resolver.ts:108:21)",
+              "LambdaDataSource.createResolver (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-appsync\\lib\\data-source.ts:139:12)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:49:22)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPC8F37DF5D",
+            "trace": [
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1309:21)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1Subnet294FC2B8",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1RouteTable5F58AF51",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1RouteTableAssociation68C9A56C",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1DefaultRouteA6CD80A2",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1699:19)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1362:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:46)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1EIP29FE0900",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1886:40)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet1NATGateway7BDCDA06",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1884:17)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2Subnet1BF50990",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2RouteTable742BB266",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2RouteTableAssociation6EC04393",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2DefaultRoute6A2E25CA",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1699:19)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1362:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:46)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2EIP894E28EF",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1886:40)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet2/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet2NATGateway3E9981C6",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1884:17)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3Subnet9289C934",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3RouteTable3BFFB901",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3RouteTableAssociation1B8E5AFB",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PublicSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1874:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1505:32",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3DefaultRoute8582ED5F",
+            "trace": [
+              "PublicSubnet.addDefaultInternetRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1699:19)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1362:22",
+              "Array.forEach (<anonymous>)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1361:46)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3EIP8B84186B",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1886:40)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PublicSubnet3/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPublicSubnet3NATGateway5168A317",
+            "trace": [
+              "PublicSubnet.addNatGateway (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1884:17)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:237:27)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet1SubnetE2C97492",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet1RouteTable95BEEEE0",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet1RouteTableAssociation6020C355",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet1DefaultRouteECD6FC08",
+            "trace": [
+              "PrivateSubnet.addRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1745:19)",
+              "NatGatewayProvider.configureSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:251:12)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:244:12)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet2Subnet48274A3D",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet2RouteTableC6A0F7FA",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet2RouteTableAssociation8A4CC0D6",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet2DefaultRoute7143D661",
+            "trace": [
+              "PrivateSubnet.addRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1745:19)",
+              "NatGatewayProvider.configureSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:251:12)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:244:12)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet3Subnet50876B1B",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1659:20)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet3RouteTableE8247920",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1677:19)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet3RouteTableAssociationC1592B4C",
+            "trace": [
+              "new Subnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1683:5)",
+              "new PrivateSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1912:5)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1510:33",
+              "Array.forEach (<anonymous>)",
+              "Vpc.createSubnetResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1476:28)",
+              "Vpc.createSubnets (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1471:12)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1343:10)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCPrivateSubnet3DefaultRoute5F991EAF",
+            "trace": [
+              "PrivateSubnet.addRoute (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1745:19)",
+              "NatGatewayProvider.configureSubnet (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:251:12)",
+              "NatGatewayProvider.configureNat (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\nat.ts:244:12)",
+              "Vpc.createNatGateways (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1446:14)",
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1368:14)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCIGWBEE6F840",
+            "trace": [
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1350:19)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/ExampleVPC/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ExampleVPCVPCGWB46DD980",
+            "trace": [
+              "new Vpc (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\vpc.ts:1356:19)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:22:17)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AuroraSeekCluster/Subnets/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraSeekClusterSubnets4C33E2A8",
+            "trace": [
+              "new SubnetGroup (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\subnet-group.ts:78:25)",
+              "new ServerlessClusterNew (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:381:42)",
+              "new ServerlessCluster (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:508:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:24:21)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AuroraSeekCluster/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraSeekClusterSecurityGroup81B9CC0A",
+            "trace": [
+              "new SecurityGroup (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-ec2\\lib\\security-group.ts:466:26)",
+              "new ServerlessClusterNew (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:389:9)",
+              "new ServerlessCluster (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:508:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:24:21)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AuroraSeekCluster/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraSeekClusterSecret6A58FA84",
+            "trace": [
+              "new Secret (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-secretsmanager\\lib\\secret.ts:546:22)",
+              "new DatabaseSecret (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\database-secret.ts:74:5)",
+              "Object.renderCredentials (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\private\\util.ts:96:7)",
+              "new ServerlessCluster (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:518:25)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:24:21)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AuroraSeekCluster/Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraSeekClusterSecretAttachment56947955",
+            "trace": [
+              "new SecretTargetAttachment (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-secretsmanager\\lib\\secret.ts:750:24)",
+              "DatabaseSecret.attach (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-secretsmanager\\lib\\secret.ts:409:12)",
+              "new ServerlessCluster (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:538:28)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:24:21)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AuroraSeekCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AuroraSeekClusterB5E450A5",
+            "trace": [
+              "new ServerlessCluster (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:521:21)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:24:21)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/my-function/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionServiceRole41691664",
+            "trace": [
+              "new Role (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:358:18)",
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:663:31)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/my-function/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionServiceRoleDefaultPolicy4ECD21C4",
+            "trace": [
+              "new Policy (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:399:28)",
+              "Function.addToPrincipal (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:164:61)",
+              "ServerlessCluster.grantDataApiAccess (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-rds\\lib\\serverless-cluster.ts:324:27)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:45:13)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/my-function/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "myfunctionDF753486",
+            "trace": [
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:741:35)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3Bucket19A3D08C",
+            "trace": [
+              "new FileAssetParameters (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "ExampleStack.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16S3VersionKey42AB7C43",
+            "trace": [
+              "new FileAssetParameters (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "ExampleStack.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/AssetParameters/b3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersb3e45ad18b1c97a7b894cc268ed36f233457002c138aa4c5b9f795bbe24abd16ArtifactHashB332BF34",
+            "trace": [
+              "new FileAssetParameters (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:169:16)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:86:19)",
+              "ExampleStack.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:680:29)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:53",
+              "withoutDeprecationWarnings (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:218:12)",
+              "LegacyStackSynthesizer.addFileAsset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:91:14)",
+              "new Asset (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:152:40)",
+              "AssetCode.bind (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:285:20)",
+              "new Function (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:683:29)",
+              "new NodejsFunction (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\aws-lambda-nodejs\\lib\\function.ts:103:5)",
+              "new ExampleStack (D:\\VoVan\\Example\\lib\\example-stack.ts:31:19)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\bin\\example.ts:6:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Module.m._compile (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1056:23)",
+              "Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Object.require.extensions.<computed> [as .ts] (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\index.ts:1059:12)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "main (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:198:14)",
+              "Object.<anonymous> (D:\\VoVan\\Example\\node_modules\\ts-node\\src\\bin.ts:288:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1101:14)",
+              "Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)",
+              "Module.load (node:internal/modules/cjs/loader:981:32)",
+              "Function.Module._load (node:internal/modules/cjs/loader:822:12)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)",
+              "node:internal/main/run_main_module:17:47"
+            ]
+          }
+        ],
+        "/cdk-stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\metadata-resource.ts:22:24)",
+              "D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:166:5",
+              "visit (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:231:5)",
+              "visit (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:227:5)",
+              "injectMetadataResources (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:157:3)",
+              "Object.synthesize (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\private\\synthesis.ts:18:3)",
+              "App.synth (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\stage.ts:180:23)",
+              "process.<anonymous> (D:\\VoVan\\Example\\node_modules\\@aws-cdk\\core\\lib\\app.ts:131:45)",
+              "Object.onceWrapper (node:events:510:26)",
+              "process.emit (node:events:390:28)",
+              "process.emit (node:domain:475:12)",
+              "process.emit (D:\\VoVan\\Example\\node_modules\\source-map-support\\source-map-support.js:516:21)"
+            ]
+          }
+        ]
+      },
+      "displayName": "cdk-stack"
+    }
+  }
+}

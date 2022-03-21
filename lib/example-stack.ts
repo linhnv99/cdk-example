@@ -1,16 +1,71 @@
-import { Stack, StackProps } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-// import * as sqs from 'aws-cdk-lib/aws-sqs';
-
-export class ExampleStack extends Stack {
-  constructor(scope: Construct, id: string, props?: StackProps) {
+import * as lambda from "@aws-cdk/aws-lambda";
+import { NodejsFunction } from "@aws-cdk/aws-lambda-nodejs";
+import * as cdk from "@aws-cdk/core";
+import * as appsync from '@aws-cdk/aws-appsync';
+import * as ec2 from '@aws-cdk/aws-ec2';
+import * as rds from '@aws-cdk/aws-rds';
+import * as path from "path";
+export class ExampleStack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    // The code that defines your stack goes here
+    const api = new appsync.GraphqlApi(this, 'Api', {
+      name: 'appsync-seek-backend',
+      schema: appsync.Schema.fromAsset('graphql/schema.graphql'),
+      authorizationConfig: {
+        defaultAuthorization: {
+          authorizationType: appsync.AuthorizationType.API_KEY
+        }
+      }
+    })
 
-    // example resource
-    // const queue = new sqs.Queue(this, 'ExampleQueue', {
-    //   visibilityTimeout: cdk.Duration.seconds(300)
-    // });
+    const vpc = new ec2.Vpc(this, 'ExampleVPC')
+
+    const cluster = new rds.ServerlessCluster(this, 'AuroraSeekCluster', {
+      engine: rds.DatabaseClusterEngine.AURORA_MYSQL,
+      defaultDatabaseName: 'Seek',
+      vpc,
+      enableDataApi: true,
+    })
+
+    const myFnc = new NodejsFunction(this, "my-function", {
+      memorySize: 1024,
+      timeout: cdk.Duration.seconds(5),
+      handler: "main",
+      entry: "src/lambda/index.ts",
+      bundling: {
+        minify: false,
+        externalModules: ["aws-sdk"],
+        nodeModules: ['@prisma/client', 'prisma'],
+        commandHooks: {
+          beforeBundling(_inputDir: string, _outputDir: string) {
+            return []
+          },
+          beforeInstall(inputDir: string, outputDir: string) {
+            return [`cp -R ${inputDir}/prisma ${outputDir}/`]
+          },
+          afterBundling(_inputDir: string, outputDir: string) {
+            return [
+              `cd ${outputDir}`,
+              `yarn prisma generate`,
+              `rm -rf node_modules/@prisma/engines`,
+              `rm -rf node_modules/@prisma/client/node_modules node_modules/.bin node_modules/prisma`,
+            ]
+          },
+        },
+      },
+      environment: {
+        SECRET_ID: cluster.secret?.secretArn || ''
+      },
+    });
+
+    cluster.grantDataApiAccess(myFnc)
+
+    const lambdaDatasource = api.addLambdaDataSource('lambdaDatasource', myFnc)
+
+    lambdaDatasource.createResolver({
+      typeName: 'Query',
+      fieldName: 'getUsers'
+    })
   }
 }
