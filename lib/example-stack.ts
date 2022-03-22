@@ -5,12 +5,14 @@ import * as appsync from '@aws-cdk/aws-appsync';
 import * as ec2 from '@aws-cdk/aws-ec2';
 import * as rds from '@aws-cdk/aws-rds';
 import * as path from "path";
+import * as secretsmanger from "@aws-cdk/aws-secretsmanager"
+
 export class ExampleStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const api = new appsync.GraphqlApi(this, 'Api', {
-      name: 'appsync-seek-backend',
+      name: 'appsync-example-backend',
       schema: appsync.Schema.fromAsset('graphql/schema.graphql'),
       authorizationConfig: {
         defaultAuthorization: {
@@ -21,14 +23,19 @@ export class ExampleStack extends cdk.Stack {
 
     const vpc = new ec2.Vpc(this, 'ExampleVPC')
 
-    const cluster = new rds.ServerlessCluster(this, 'AuroraSeekCluster', {
+    const cluster = new rds.ServerlessCluster(this, 'AuroraExampleCluster', {
       engine: rds.DatabaseClusterEngine.AURORA_MYSQL,
-      defaultDatabaseName: 'Seek',
+      defaultDatabaseName: 'Example',
       vpc,
       enableDataApi: true,
     })
 
+    const secret = secretsmanger.Secret.fromSecretAttributes(this, 'Secret', {
+      secretArn: cluster.secret?.secretArn || ''
+    })
+
     const myFnc = new NodejsFunction(this, "my-function", {
+      runtime: lambda.Runtime.NODEJS_14_X,
       memorySize: 1024,
       timeout: cdk.Duration.seconds(20),
       handler: "main",
@@ -47,16 +54,16 @@ export class ExampleStack extends cdk.Stack {
           afterBundling(_inputDir: string, outputDir: string) {
             return [
               `cd ${outputDir}`,
-              `yarn prisma generate`,
+              `npx prisma generate`,
               `rm -rf node_modules/@prisma/engines`,
-              `rm -rf node_modules/@prisma/client/node_modules node_modules/.bin node_modules/prisma`,
             ]
           },
         },
       },
       environment: {
         SECRET_ID: cluster.secret?.secretArn || '',
-        DATABASE_URL: process.env.DATABASE_URL || ''
+        DATABASE_URL: process.env.DATABASE_URL || '',
+        MASTER_SECRET: secret.toString(),
       },
     });
 

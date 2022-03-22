@@ -1,0 +1,48 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "dc0f71e5b214aa080d5a2ab7be244fe07dafba78ccd3c99d13e7e8525e68192c": {
+      "source": {
+        "path": "/Users/nguyenvietlinh/Documents/CongTy/example",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "140399347549-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-140399347549-ap-northeast-1",
+          "objectKey": "dc0f71e5b214aa080d5a2ab7be244fe07dafba78ccd3c99d13e7e8525e68192c.zip",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::140399347549:role/cdk-hnb659fds-file-publishing-role-140399347549-ap-northeast-1"
+        }
+      }
+    },
+    "bc606341475b5bf4d0008e76b2a558afbddb41fdb3b035d73d48bb946b47dcc6": {
+      "source": {
+        "path": "/Users/nguyenvietlinh/Documents/CongTy/example",
+        "packaging": "zip"
+      },
+      "destinations": {
+        "140399347549-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-140399347549-ap-northeast-1",
+          "objectKey": "bc606341475b5bf4d0008e76b2a558afbddb41fdb3b035d73d48bb946b47dcc6.zip",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::140399347549:role/cdk-hnb659fds-file-publishing-role-140399347549-ap-northeast-1"
+        }
+      }
+    },
+    "52a2af31adfdd2cc6f3583f8cda2d8c336131fd704c3b2a1aca87fd9c9a96d55": {
+      "source": {
+        "path": "cdk-stack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "140399347549-ap-northeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-140399347549-ap-northeast-1",
+          "objectKey": "52a2af31adfdd2cc6f3583f8cda2d8c336131fd704c3b2a1aca87fd9c9a96d55.json",
+          "region": "ap-northeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::140399347549:role/cdk-hnb659fds-file-publishing-role-140399347549-ap-northeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

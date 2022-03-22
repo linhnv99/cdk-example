@@ -23,8 +23,5 @@ export async function main(
   })
 
   const users = await db.user.findMany() || ["SAI"]
-  return {
-    body: JSON.stringify({message: 'Successful lambda invocation', users: users}),
-    statusCode: 200,
-  };
+  return users;
 }

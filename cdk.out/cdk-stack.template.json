@@ -4,7 +4,7 @@
       "Type": "AWS::AppSync::GraphQLApi",
       "Properties": {
         "AuthenticationType": "API_KEY",
-        "Name": "appsync-seek-backend"
+        "Name": "appsync-example-backend"
       },
       "Metadata": {
         "aws:cdk:path": "cdk-stack/Api/Resource"
@@ -857,10 +857,10 @@
         "aws:cdk:path": "cdk-stack/ExampleVPC/VPCGW"
       }
     },
-    "AuroraSeekClusterSubnets4C33E2A8": {
+    "AuroraExampleClusterSubnets5D04853F": {
       "Type": "AWS::RDS::DBSubnetGroup",
       "Properties": {
-        "DBSubnetGroupDescription": "Subnets for AuroraSeekCluster database",
+        "DBSubnetGroupDescription": "Subnets for AuroraExampleCluster database",
         "SubnetIds": [
           {
             "Ref": "ExampleVPCPrivateSubnet1SubnetE2C97492"
@@ -874,10 +874,10 @@
         ]
       },
       "Metadata": {
-        "aws:cdk:path": "cdk-stack/AuroraSeekCluster/Subnets/Default"
+        "aws:cdk:path": "cdk-stack/AuroraExampleCluster/Subnets/Default"
       }
     },
-    "AuroraSeekClusterSecurityGroup81B9CC0A": {
+    "AuroraExampleClusterSecurityGroup4844C552": {
       "Type": "AWS::EC2::SecurityGroup",
       "Properties": {
         "GroupDescription": "RDS security group",
@@ -893,10 +893,10 @@
         }
       },
       "Metadata": {
-        "aws:cdk:path": "cdk-stack/AuroraSeekCluster/SecurityGroup/Resource"
+        "aws:cdk:path": "cdk-stack/AuroraExampleCluster/SecurityGroup/Resource"
       }
     },
-    "AuroraSeekClusterSecret6A58FA84": {
+    "AuroraExampleClusterSecret853E40B0": {
       "Type": "AWS::SecretsManager::Secret",
       "Properties": {
         "Description": {
@@ -920,32 +920,32 @@
       "UpdateReplacePolicy": "Delete",
       "DeletionPolicy": "Delete",
       "Metadata": {
-        "aws:cdk:path": "cdk-stack/AuroraSeekCluster/Secret/Resource"
+        "aws:cdk:path": "cdk-stack/AuroraExampleCluster/Secret/Resource"
       }
     },
-    "AuroraSeekClusterSecretAttachment56947955": {
+    "AuroraExampleClusterSecretAttachment0F27E2CD": {
       "Type": "AWS::SecretsManager::SecretTargetAttachment",
       "Properties": {
         "SecretId": {
-          "Ref": "AuroraSeekClusterSecret6A58FA84"
+          "Ref": "AuroraExampleClusterSecret853E40B0"
         },
         "TargetId": {
-          "Ref": "AuroraSeekClusterB5E450A5"
+          "Ref": "AuroraExampleClusterC52C1F7A"
         },
         "TargetType": "AWS::RDS::DBCluster"
       },
       "Metadata": {
-        "aws:cdk:path": "cdk-stack/AuroraSeekCluster/Secret/Attachment/Resource"
+        "aws:cdk:path": "cdk-stack/AuroraExampleCluster/Secret/Attachment/Resource"
       }
     },
-    "AuroraSeekClusterB5E450A5": {
+    "AuroraExampleClusterC52C1F7A": {
       "Type": "AWS::RDS::DBCluster",
       "Properties": {
         "Engine": "aurora-mysql",
-        "DatabaseName": "Seek",
+        "DatabaseName": "Example",
         "DBClusterParameterGroupName": "default.aurora-mysql5.7",
         "DBSubnetGroupName": {
-          "Ref": "AuroraSeekClusterSubnets4C33E2A8"
+          "Ref": "AuroraExampleClusterSubnets5D04853F"
         },
         "EnableHttpEndpoint": true,
         "EngineMode": "serverless",
@@ -955,7 +955,7 @@
             [
               "{{resolve:secretsmanager:",
               {
-                "Ref": "AuroraSeekClusterSecret6A58FA84"
+                "Ref": "AuroraExampleClusterSecret853E40B0"
               },
               ":SecretString:username::}}"
             ]
@@ -967,7 +967,7 @@
             [
               "{{resolve:secretsmanager:",
               {
-                "Ref": "AuroraSeekClusterSecret6A58FA84"
+                "Ref": "AuroraExampleClusterSecret853E40B0"
               },
               ":SecretString:password::}}"
             ]
@@ -977,7 +977,7 @@
         "VpcSecurityGroupIds": [
           {
             "Fn::GetAtt": [
-              "AuroraSeekClusterSecurityGroup81B9CC0A",
+              "AuroraExampleClusterSecurityGroup4844C552",
               "GroupId"
             ]
           }
@@ -986,7 +986,7 @@
       "UpdateReplacePolicy": "Snapshot",
       "DeletionPolicy": "Snapshot",
       "Metadata": {
-        "aws:cdk:path": "cdk-stack/AuroraSeekCluster/Resource"
+        "aws:cdk:path": "cdk-stack/AuroraExampleCluster/Resource"
       }
     },
     "myfunctionServiceRole41691664": {
@@ -1046,7 +1046,7 @@
               ],
               "Effect": "Allow",
               "Resource": {
-                "Ref": "AuroraSeekClusterSecretAttachment56947955"
+                "Ref": "AuroraExampleClusterSecretAttachment0F27E2CD"
               }
             }
           ],
@@ -1067,42 +1067,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": {
-            "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3Bucket0D8D88C8"
-          },
-          "S3Key": {
-            "Fn::Join": [
-              "",
-              [
-                {
-                  "Fn::Select": [
-                    0,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Fn::Select": [
-                    1,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            ]
-          }
+          "S3Bucket": "cdk-hnb659fds-assets-140399347549-ap-northeast-1",
+          "S3Key": "dc0f71e5b214aa080d5a2ab7be244fe07dafba78ccd3c99d13e7e8525e68192c.zip"
         },
         "Role": {
           "Fn::GetAtt": [
@@ -1113,9 +1079,10 @@
         "Environment": {
           "Variables": {
             "SECRET_ID": {
-              "Ref": "AuroraSeekClusterSecretAttachment56947955"
+              "Ref": "AuroraExampleClusterSecretAttachment0F27E2CD"
             },
             "DATABASE_URL": "",
+            "MASTER_SECRET": "cdk-stack/Secret",
             "AWS_NODEJS_CONNECTION_REUSE_ENABLED": "1"
           }
         },
@@ -1130,7 +1097,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "cdk-stack/my-function/Resource",
-        "aws:asset:path": "asset.4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905",
+        "aws:asset:path": "/Users/nguyenvietlinh/Documents/CongTy/example",
         "aws:asset:is-bundled": true,
         "aws:asset:property": "Code"
       }
@@ -1173,42 +1140,8 @@
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "S3Bucket": {
-            "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3BucketAAEF5CCC"
-          },
-          "S3Key": {
-            "Fn::Join": [
-              "",
-              [
-                {
-                  "Fn::Select": [
-                    0,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "Fn::Select": [
-                    1,
-                    {
-                      "Fn::Split": [
-                        "||",
-                        {
-                          "Ref": "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            ]
-          }
+          "S3Bucket": "cdk-hnb659fds-assets-140399347549-ap-northeast-1",
+          "S3Key": "bc606341475b5bf4d0008e76b2a558afbddb41fdb3b035d73d48bb946b47dcc6.zip"
         },
         "Role": {
           "Fn::GetAtt": [
@@ -1231,7 +1164,7 @@
       ],
       "Metadata": {
         "aws:cdk:path": "cdk-stack/my-func-test/Resource",
-        "aws:asset:path": "asset.9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420",
+        "aws:asset:path": "/Users/nguyenvietlinh/Documents/CongTy/example",
         "aws:asset:is-bundled": true,
         "aws:asset:property": "Code"
       }
@@ -1239,7 +1172,7 @@
     "CDKMetadata": {
       "Type": "AWS::CDK::Metadata",
       "Properties": {
-        "Analytics": "v2:deflate64:H4sIAAAAAAAA/11S207DMAz9Ft6zjDGExBu7wDQxTWVFvLuZ2bK1SYmTTVXVfyeX3eDJ9vGxfWJnwAePz/z+7gWO1BPrfb8V2iBvcwtiz1ZI2hmBbESE1mMbqTZsohVZ44Rlk2+VgYEKLZoQnPkdC+1aqGtqlODtzEC9/SlHtQysGH0s/ka52GIFAfD4OzZsAVWxhilYyJMGn7qJwqjycB0b/I5JqHi70mVkR5vpUoomKo1ex1A88ParFgH7yiYsc4VP5K5QGF909VbaWfyEIrVL+BXzO9FCgpVaXcjBeZ1nwSzBzsDiERqWGXnw7rXxXPmFef9MSEpO0cj63W8rVJblKJyRtpkZ7eqo4RbomFmTPxUa//YSiSalo3CJNOhSNB3fAmGHBRD6ViapmY5PhR2jCFIFCjZoeJtGBl4yn2A2aG8UXgj/Mx0r4wF7Sq9xR3wZzZtTIi6Mhj0If4p4/Fo+5mMn9mjHXtqplPvm54KuY6ER31H/MHjig6H/szuSsmecsrJCvkr2F+IC+6vQAgAA"
+        "Analytics": "v2:deflate64:H4sIAAAAAAAA/11S207DMAz9Ft6zjDGExBu7wDQxTWVFvLuZ2bK1SYmTTVXVfyeX3eDJ9vHxseN4wAePz/z+7gWO1BPrfb8V2iBvcwtiz1ZI2hmBbESE1mMbqTZsohVZ44Rlk291pnQsKLRQ19QowduZgXr7U45qGVgx+lj8jXKxxQoC4PF3bNgCqmINU7CQp7Y+dROFVuUBzblt8DsmoeLtSpeRHW2mSymaECavYygeePtVi4B9ZROWucInclcojI+4eivtLH5CkeQSfsX8GrSQYKVWF3JwXudZMEuwM7B4hIZlRh68exWeK4vG+2dCmuQUjaxf97ZCZVmOwhlpm5nRro4z3AIdM2vyv4PGv71EoknpyAuz1OhSNB3fAmGHBRB6KZOmmY5PhR2jCFIFCjZoeJtaBl4yn2A2aG8mvBD+ZzpWxg/sKb3GHfFlNG9OibgwGvYgnBHxeE0+5mMn9mjHfrRTKffi54KuY0GI76h/GDzxwdCf6Y6k7BmnrKyQr5L9BaKtBQ7DAgAA"
       },
       "Metadata": {
         "aws:cdk:path": "cdk-stack/CDKMetadata/Default"
@@ -1247,29 +1180,37 @@
     }
   },
   "Parameters": {
-    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3Bucket0D8D88C8": {
-      "Type": "String",
-      "Description": "S3 bucket for asset \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
-    },
-    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905S3VersionKey24263C02": {
-      "Type": "String",
-      "Description": "S3 key for asset version \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
-    },
-    "AssetParameters4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905ArtifactHashE89DF71B": {
-      "Type": "String",
-      "Description": "Artifact hash for asset \"4abc3982cc61b6fb5c9ca29caf8e3020332d8c0b712be577479709e329b62905\""
-    },
-    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3BucketAAEF5CCC": {
-      "Type": "String",
-      "Description": "S3 bucket for asset \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
-    },
-    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420S3VersionKey9EB65336": {
-      "Type": "String",
-      "Description": "S3 key for asset version \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
-    },
-    "AssetParameters9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420ArtifactHash80E0AB76": {
-      "Type": "String",
-      "Description": "Artifact hash for asset \"9a3c506aa0c564bd75de0d74131b5d1ebea71f8d2e35574ecd459857cdaf0420\""
+    "BootstrapVersion": {
+      "Type": "AWS::SSM::Parameter::Value<String>",
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]"
+    }
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                  ],
+                  {
+                    "Ref": "BootstrapVersion"
+                  }
+                ]
+              }
+            ]
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI."
+        }
+      ]
     }
   }
 }
